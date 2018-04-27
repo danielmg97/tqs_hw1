@@ -11,6 +11,7 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(EasyMockRunner.class)
@@ -47,7 +48,7 @@ public class CurrencyCalculatorTestMock {
     /**
      * Test of convert method, of class CurrencyCalculator.
      */
-    @org.junit.Test
+    @Test
     public void testConvert() {
         System.out.println("--Test Conversion with Mock for ExchangeRateService--");
         Map <String,Double> mapa = new HashMap <>();
@@ -55,6 +56,6 @@ public class CurrencyCalculatorTestMock {
         mapa.put("EUR",1.0);
         EasyMock.expect(service.getRatesCache()).andReturn(mapa);
         EasyMock.replay(service);
-        Assert.assertEquals(0.358, instance.convert("USD", 0.5, "GBP"),0.1);        
+        Assert.assertEquals(0.4, instance.convert("USD", 0.5, "EUR"),0.1);        
     }
 }

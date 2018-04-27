@@ -1,5 +1,6 @@
 com\mycompany\tqshw\CurrencyCalculatorTestMock.class
 com\mycompany\tqshw\ExchangeRateTest.class
 com\mycompany\tqshw\InterfaceTest.class
+com\mycompany\tqshw\AllTests.class
 com\mycompany\tqshw\ExchangeRateServiceTest.class
 com\mycompany\tqshw\CurrencyCalculatorTest.class

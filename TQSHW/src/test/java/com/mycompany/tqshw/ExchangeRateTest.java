@@ -9,6 +9,7 @@ import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -28,7 +29,7 @@ public class ExchangeRateTest {
         InputStream is = url.openStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String result = br.readLine();
-        String expected = "10 USD -> 8.21827744904668 EUR";
-        assertEquals(expected,result);
+        String expected = "10 USD -> "+"8.\\d*"+" EUR";
+        assertTrue(result.matches(expected));
     }
 }
