@@ -1,0 +1,4 @@
+org\netbeans\rest\application\config\ApplicationConfig.class
+com\mycompany\tqshw\CurrencyCalculator.class
+com\mycompany\tqshw\ExchangeRate.class
+com\mycompany\tqshw\ExchangeRateService.class
